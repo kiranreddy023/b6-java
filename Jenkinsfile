@@ -40,8 +40,6 @@ pipeline{
         success{
                 archiveArtifacts artifacts: 'target/*.jar', followSymlinks: false
                 junit 'target/**/*.xml'
-        }
-        always{
                 cleanWs()
         }
     }
