@@ -1,10 +1,11 @@
 pipeline{
-    parameters {
- 	 choice choices: ['slaveSSH', 'slavePASSWD', 'slaveWEB'], description: 'Choose the Slave Machine', name: 'Slave'
-    }
-    agent {
-        label "${params.Slave}"
-    }
+   // parameters {
+ 	// choice choices: ['slaveSSH', 'slavePASSWD', 'slaveWEB'], description: 'Choose the Slave Machine', name: 'Slave'
+    //}
+    //agent {
+      //  label "${params.Slave}"
+   // }
+   agent any
     tools{
         maven 'maven-3.6.3'
     }
