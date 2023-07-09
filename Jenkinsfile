@@ -30,11 +30,18 @@ pipeline{
                 sh 'docker build -t kiran023/java:v1 .'
             }
         }
+        stage('docker run'){
+            steps{
+                sh 'docker run kiran023/java:v1'
+            }
+        }
     }
     post{
-        always{
+        success{
                 archiveArtifacts artifacts: 'target/*.jar', followSymlinks: false
                 junit 'target/**/*.xml'
+        }
+        always{
                 cleanWs()
         }
     }
