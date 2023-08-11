@@ -70,4 +70,18 @@
       </plugin>
     </plugins>
   </build>
+
+<distributionManagement>
+    <repository>
+        <id>central</id>
+        <name>myServer-releases</name>
+        <url>http://jenkins.swedencentral.cloudapp.azure.com:8081/artifactory/amazon</url>
+    </repository>
+    <snapshotRepository>
+        <id>snapshots</id>
+        <name>myServer-snapshots</name>
+        <url>http://jenkins.swedencentral.cloudapp.azure.com:8081/artifactory/amazon</url>
+    </snapshotRepository>
+</distributionManagement>
+  
 </project>
